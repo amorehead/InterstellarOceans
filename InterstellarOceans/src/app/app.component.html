@@ -1,0 +1,28 @@
+<form (ngSubmit)="submit()" [formGroup]="tournamentForm">
+  <div class="input-field">
+    <mat-label>
+      Enter a desired number of teams for this tournament:
+    </mat-label>
+    <input matInput [formControl]="tournamentForm.get('numberOfTeams')" />
+  </div>
+
+  <div class="input-field">
+    <mat-label>
+      Enter a desired number of quizzes for this tournament:
+    </mat-label>
+    <input matInput [formControl]="tournamentForm.get('numberOfQuizzes')" />
+  </div>
+
+  <div class="input-field">
+      <mat-label>
+        Enter a desired number of rooms for this tournament:
+      </mat-label>
+      <input matInput [formControl]="tournamentForm.get('numberOfRooms')" />
+  </div>
+
+  <div class="input-field">
+    <button mat-raised-button type="submit" [disabled]="tournamentForm.invalid">
+      View Results
+    </button>
+  </div>
+</form>
