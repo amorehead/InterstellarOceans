@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import * as iter from 'iter-tools';
 
 @Component({
   selector: 'app-root',
@@ -19,5 +20,13 @@ export class AppComponent implements OnInit {
       numberOfRooms: ['', [Validators.required]]
     });
   }
-  submit() {}
+
+  submit() {
+    this.genPowerSet();
+  }
+
+  genPowerSet() {
+    const teamIntegers = [iter.range(10)];
+    iter.chain();
+  }
 }
