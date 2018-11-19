@@ -1,20 +1,20 @@
 <form (ngSubmit)="submit()" [formGroup]="tournamentForm">
   <div class="input-field">
-    <mat-label>
+    <mat-label for="numberOfTeams">
       1. Enter a desired number of teams for this tournament:
     </mat-label>
     <input matInput [formControl]="tournamentForm.get('numberOfTeams')" />
   </div>
 
   <div class="input-field">
-    <mat-label>
+    <mat-label for="numberOfQuizzes">
       2. Enter a desired number of quizzes for this tournament:
     </mat-label>
     <input matInput [formControl]="tournamentForm.get('numberOfQuizzes')" />
   </div>
 
   <div class="input-field">
-      <mat-label>
+      <mat-label for="numberOfRooms">
         3. Enter a desired number of rooms for this tournament:
       </mat-label>
       <input matInput [formControl]="tournamentForm.get('numberOfRooms')" />
@@ -25,4 +25,7 @@
       View Results
     </button>
   </div>
+
+  <br>Values used for this computation: {{ tournamentForm.value | json }}
+  <br>Result of this computation: {{ this.tournament.possibleMatchups }}
 </form>
