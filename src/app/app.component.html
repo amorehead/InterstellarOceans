@@ -1,23 +1,35 @@
-<form (ngSubmit)="submit()" [formGroup]="tournamentForm">
+<form (ngSubmit)="onSubmitClick()" [formGroup]="tournamentForm">
   <div class="input-field">
     <mat-label for="numberOfTeams">
       1. Enter a desired number of teams for this tournament:
     </mat-label>
-    <input matInput [formControl]="tournamentForm.get('numberOfTeams')" />
+    <input
+      matInput
+      type="number"
+      [formControl]="tournamentForm.get('numberOfTeams')"
+    />
   </div>
 
   <div class="input-field">
     <mat-label for="numberOfQuizzes">
       2. Enter a desired number of quizzes for this tournament:
     </mat-label>
-    <input matInput [formControl]="tournamentForm.get('numberOfQuizzes')" />
+    <input
+      matInput
+      type="number"
+      [formControl]="tournamentForm.get('numberOfQuizzes')"
+    />
   </div>
 
   <div class="input-field">
-      <mat-label for="numberOfRooms">
-        3. Enter a desired number of rooms for this tournament:
-      </mat-label>
-      <input matInput [formControl]="tournamentForm.get('numberOfRooms')" />
+    <mat-label for="numberOfRooms">
+      3. Enter a desired number of rooms for this tournament:
+    </mat-label>
+    <input
+      matInput
+      type="number"
+      [formControl]="tournamentForm.get('numberOfRooms')"
+    />
   </div>
 
   <div class="input-field">
@@ -26,6 +38,12 @@
     </button>
   </div>
 
-  <br>Values used for this computation: {{ tournamentForm.value | json }}
-  <br>Result of this computation: {{ this.tournament.possibleMatchups }}
+  <br />Result of this computation: <br />{{ this.tournament.matchups }} <br />
+  <br />The ideal number of time slots for this tournament: <br />{{
+    this.tournament.idealNumberOfTimeSlots
+  }}
+  <br />
+  <br />The actual number of time slots for this tournament: <br />{{
+    this.tournament.actualNumberOfTimeSlots
+  }}
 </form>
