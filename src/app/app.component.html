@@ -46,11 +46,9 @@
     this.tournament.actualNumberOfTimeSlots
   }}
   <br />
-  <br />Primary result of this computation: <br />{{
-    this.tournament.primaryMatchups
-  }}
   <br />
-  <br />Alternative result of this computation: <br />{{
-    this.tournament.alternativeMatchups
-  }}
+  <p>Primary result of this computation: {{tournament.primaryMatchups.length}}</p>
+  <p *ngFor='let x of resultGroupANumberOfAppearances'>{{ x }}</p>
+  <p>Alternative result of this computation:  {{tournament.alternativeMatchups.length}}</p>
+  <p *ngFor='let x of resultGroupBNumberOfAppearances'>{{ x }}</p>
 </form>

@@ -16,6 +16,9 @@ export class AppComponent implements OnInit {
   tournament = new Tournament(0, 0, 0, 0, 0, [], []);
   tournamentForm: FormGroup;
 
+  resultGroupANumberOfAppearances: any[];
+  resultGroupBNumberOfAppearances: any[];
+
   constructor(private fb: FormBuilder, private httpService: HttpClient) {}
 
   ngOnInit() {
@@ -27,6 +30,9 @@ export class AppComponent implements OnInit {
   }
 
   onSubmitClick() {
+    this.resultGroupANumberOfAppearances = [];
+    this.resultGroupBNumberOfAppearances = [];
+
     // This updates the tournament parameters with the user's input.
     this.tournament.numberOfTeams = this.tournamentForm.get(
       'numberOfTeams'
@@ -187,13 +193,17 @@ export class AppComponent implements OnInit {
     console.log(`Number of triples: ${nonRepeatingTriplesA.length}`);
 
     for (let i = 0; i < teams.length; i++) {
-      console.log(
-        `Number of Triples with ${teams[i]}: ${
-          nonRepeatingTriplesA.filter(triple =>
-            triple.some(num => num === teams[i])
-          ).length
-        }`
-      );
+      this.resultGroupANumberOfAppearances.push(`Number of Triples with ${teams[i]}: ${
+        nonRepeatingTriplesA.filter(triple =>
+          triple.some(num => num === teams[i])
+        ).length
+      }`);
+
+      this.resultGroupBNumberOfAppearances.push(`Number of Triples with ${teams[i]}: ${
+        nonRepeatingTriplesB.filter(triple =>
+          triple.some(num => num === teams[i])
+        ).length
+      }`);
     }
 
     // console.log(nonRepeatingTriples);
