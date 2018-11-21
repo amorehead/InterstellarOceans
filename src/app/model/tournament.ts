@@ -5,6 +5,7 @@ export class Tournament {
     public numberOfRooms: number,
     public idealNumberOfTimeSlots: number,
     public actualNumberOfTimeSlots: number,
-    public matchups: any[]
+    public primaryMatchups: any[],
+    public alternativeMatchups: any[]
   ) {}
 }

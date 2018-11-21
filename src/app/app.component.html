@@ -38,12 +38,19 @@
     </button>
   </div>
 
-  <br />Result of this computation: <br />{{ this.tournament.matchups }} <br />
   <br />The ideal number of time slots for this tournament: <br />{{
     this.tournament.idealNumberOfTimeSlots
   }}
   <br />
   <br />The actual number of time slots for this tournament: <br />{{
     this.tournament.actualNumberOfTimeSlots
+  }}
+  <br />
+  <br />Primary result of this computation: <br />{{
+    this.tournament.primaryMatchups
+  }}
+  <br />
+  <br />Alternative result of this computation: <br />{{
+    this.tournament.alternativeMatchups
   }}
 </form>
