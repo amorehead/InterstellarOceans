@@ -99,8 +99,9 @@ export class AppComponent implements OnInit {
     const idealNumberOfQuizzes = (numberOfTeams - 1) / 2;
     const idealNumberOfRooms = numberOfTeams / 3;
     const idealNumberOfMatches = (numberOfTeams * idealNumberOfQuizzes) / 3;
-    this.tournament.idealNumberOfTimeSlots =
-      idealNumberOfMatches / idealNumberOfRooms;
+    this.tournament.idealNumberOfTimeSlots = Math.ceil(
+      idealNumberOfMatches / idealNumberOfRooms
+    );
   }
 
   // This function finds a realistic number of time slots that must be used for scheduling a given tournament.
@@ -109,9 +110,11 @@ export class AppComponent implements OnInit {
     numberOfQuizzes: number,
     numberOfRooms: number
   ) {
-    const numberOfMatches = numberOfTeams / numberOfQuizzes / 3;
+    const numberOfMatches = (numberOfTeams * numberOfQuizzes) / 3;
     if (numberOfMatches % 3 === 0) {
-      this.tournament.actualNumberOfTimeSlots = numberOfMatches / numberOfRooms;
+      this.tournament.actualNumberOfTimeSlots = Math.ceil(
+        numberOfMatches / numberOfRooms
+      );
     } else {
       this.tournament.actualNumberOfTimeSlots = Math.ceil(numberOfMatches);
     }
