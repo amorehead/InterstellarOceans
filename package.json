@@ -26,6 +26,7 @@
     "core-js": "^2.6.11",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
+    "npm-registry-fetch": "^8.1.2",
     "rxjs": "~6.2.0",
     "serialize-javascript": "^2.1.2",
     "set-value": "^3.0.2",
