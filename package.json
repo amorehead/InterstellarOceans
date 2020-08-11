@@ -29,7 +29,7 @@
     "minimist": "^1.2.5",
     "npm-registry-fetch": "^8.1.2",
     "rxjs": "~6.2.0",
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^3.1.0",
     "set-value": "^3.0.2",
     "zone.js": "^0.8.29"
   },
