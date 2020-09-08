@@ -24,6 +24,7 @@
     "@angular/router": "^6.1.0",
     "acorn": "^7.2.0",
     "core-js": "^2.6.11",
+    "http-proxy": "^1.18.1",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.19",
     "minimist": "^1.2.5",
@@ -31,6 +32,7 @@
     "rxjs": "~6.2.0",
     "serialize-javascript": "^3.1.0",
     "set-value": "^3.0.2",
+    "yargs-parser": "^13.1.2",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
