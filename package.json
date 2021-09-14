@@ -32,7 +32,7 @@
     "npm-registry-fetch": "^8.1.2",
     "rxjs": "~6.2.0",
     "serialize-javascript": "^3.1.0",
-    "set-value": "^3.0.2",
+    "set-value": "^4.0.1",
     "webpack-subresource-integrity": "^1.5.1",
     "yargs-parser": "^13.1.2",
     "zone.js": "^0.8.29"
