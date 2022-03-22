@@ -27,7 +27,7 @@
     "http-proxy": "^1.18.1",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.21",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node-forge": "^1.0.0",
     "npm-registry-fetch": "^8.1.2",
     "rxjs": "~6.2.0",
